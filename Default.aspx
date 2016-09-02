@@ -23,13 +23,15 @@
 </head>
 <body>
   <header>
+      <div class="banner">
+      </div>
     <div class="nav">
       <ul>
         <li class="home"><a href="Default.aspx" class="active">home</a></li>
         <li class="music"><a href="MusicPage.aspx">music</a></li>
         <li class="podcast"><a href="PodcastPage">podcast</a></li>
         <li class="video"><a href="VideoPage">video</a></li>
-        <li class="about"><a href="#">about</a></li>          
+        <li class="about"><a href="#about">about</a></li>          
         <li class="login"><a href="WebLogin.aspx">login</a></li>
       </ul>
     </div>
@@ -40,16 +42,21 @@
       <br>
       <li class="event">Event
          <img class="event-img" src="PhotoGallery/DepartingPoloField.jpg" />
-      </li>
+      </li><br />
       <li class="event">'nother event
           <img class="event-img" src="PhotoGallery/GrassLanding.jpg" />
-      </li>
+      </li><br />
       <li class="event">and one more
           <img class="event-img" src="PhotoGallery/OverEngland.jpg" />
       </li>
   </div>
-    <div class="main-content">
+    <div id="main-content">
        <p>weird weird weird</p>
+    </div>
+    <div name= "about" id="about">
+        We are Weird. We like music and art.<br />
+        mfweird@gmail.com<br />
+        Facebook/Twitter/Instagram
     </div>
 </body>
 </html>

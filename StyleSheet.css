@@ -21,6 +21,16 @@ body {
   padding: 0;
   background: #f0f4f4;
 }
+
+.banner {
+    background-image: url('https://i.ytimg.com/vi/EmojXqnukuU/maxresdefault.jpg');
+    height: 15em;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    top= 0;
+}
  
 .nav ul {
   list-style: none;
@@ -30,8 +40,6 @@ body {
   margin: 0;
   border-bottom: 5px solid #96E5D3;
   width: 100%;
-  position: fixed;
-  top: 0;
   left: 0;
 }
 .nav li {
@@ -78,12 +86,11 @@ body {
   }
   
   .sidebar {
-    width: 200px;
-    height: 700px;
+    width: 16em;
+    height: 100%;
     float: left;
     background: #bfbfbf;
-    border-right: 3px solid #404040;
-    border-bottom: 3px solid #404040;
+    border: 3px solid #404040;
     border-radius: 15px;
     margin-left: -10px;
   }
@@ -110,13 +117,21 @@ body {
 
   .event-img {
       height: 75px;
-      width: 100px;
+      width: 75px;
+      border-radius: 50px;
+  }
+
+  #main-content {
+      height: 100em;
+      background: #f0f4f4;
+  }
+
+  #about {
+      text-align: center;
+      color: #888;
+      font-size: 0.8em;
   }
  
-  
-body {
-	padding-top: 2em;
-	}
 
 #header a {
 	display: block;
