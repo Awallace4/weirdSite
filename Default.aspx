@@ -51,7 +51,7 @@
       </li>
   </div>
     <div id="main-content">
-       <p>weird weird weird</p>
+       <p>weird weird weird fartz</p>
     </div>
     <div name= "about" id="about">
         We are Weird. We like music and art.<br />
