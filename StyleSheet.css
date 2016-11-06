@@ -29,7 +29,7 @@ body {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    top= 0;
+    top: 0;
 }
  
 .nav ul {
@@ -66,314 +66,363 @@ body {
   color: #404040;
   cursor: default;
 }
- 
+
 @media screen and (min-width: 600px) {
-  .nav li {
-    width: 120px;
-    border-bottom: none;
-    height: 50px;
-    line-height: 50px;
-    font-size: 1.4em;
-  }
-  
-  .nav li {
-    display: inline-block;
-    margin-right: -4px;
-  }
-  
-  .login {
-    float: right;
-  }
-  
-  .sidebar {
-    width: 16em;
-    height: 100%;
-    float: left;
-    background: #bfbfbf;
-    border: 3px solid #404040;
-    border-radius: 15px;
-    margin-left: -10px;
-  }
-  
-  .event-list {
-    list-style: none;
-    background: #E0F2F1;
-    margin: 15px;
-    padding: 5px;
-    border-radius: 10px;
-  }
-  
-  .sidebar-header {
-    text-align: center;
-    font-size: 20px;
-    font-family: 'Oswald', sans-serif;
-    margin: 5px;
-  }
-  
-  .event {
-    font-family: 'Oswald', sans-serif;
-    margin: 10px;
-  }
+    .nav li {
+        width: 120px;
+        border-bottom: none;
+        height: 50px;
+        line-height: 50px;
+        font-size: 1.4em;
+    }
 
-  .event-img {
-      height: 75px;
-      width: 75px;
-      border-radius: 50px;
-  }
+    .nav li {
+        display: inline-block;
+        margin-right: -4px;
+    }
 
-  #main-content {
-      height: 100em;
-      background: #f0f4f4;
-  }
+    .login {
+        float: right;
+    }
 
-  #about {
-      text-align: center;
-      color: #888;
-      font-size: 0.8em;
-  }
- 
+    #main-content {
+        height: 100em;
+        background: #f0f4f4;
+    }
 
-#header a {
-	display: block;
-	text-decoration: none;
-	color: #bbe;
-	margin: 0;
-	padding: 0;
-	}
+    /* Slideshow container */
+    .slideshow-container {
+        max-width: 1000px;
+        position: relative;
+        margin: auto;
+    }
 
-h1 {
-	text-align: left;
-	font-size: 4em;
-	font-weight: bold;
-	font-style: italic;
-	margin: 0;
-	padding: .4em;
-	}
+    /* Next & previous buttons */
+    .prev, .next {
+        cursor: pointer;
+        position: absolute;
+        top: 50%;
+        width: auto;
+        margin-top: -22px;
+        padding: 16px;
+        color: white;
+        font-weight: bold;
+        font-size: 18px;
+        transition: 0.6s ease;
+        border-radius: 0 3px 3px 0;
+    }
 
-#content {
-	margin: 2em 0;
-	padding: 0;
-	float: left;
-	width: 70%;
-	background: #446;
-	border: 1px solid #335;
-	line-height: 140%;
-	}
+    /* Position the "next button" to the right */
+    .next {
+        right: 0;
+        border-radius: 3px 0 0 3px;
+    }
 
-h2 {
-	font-weight: bold;
-	font-size: 1em;
-	text-align: right;
-	margin: 1em 20px 0 20px;
-	padding: 0 0 .1em 0;
-	color: #eef;
-	border-bottom: 1px solid #99b;
-	}
+        /* On hover, add a black background color with a little bit see-through */
+        .prev:hover, .next:hover {
+            background-color: rgba(0,0,0,0.8);
+        }
 
-h3 {
-	font-weight: normal;
-	font-size: 1.8em;
-	text-align: left;
-	color: #99b;
-	margin: .3em 20px;
-	padding: 0;
-	}
+    /* Caption text */
+    .text {
+        color: #f2f2f2;
+        font-size: 15px;
+        padding: 8px 12px;
+        position: absolute;
+        bottom: 8px;
+        width: 100%;
+        text-align: center;
+    }
 
-div.meta {
-	text-align: right;
-	font-size: .9em;
-	margin: .7em 20px;
-	}
+    /* The dots/bullets/indicators */
+    .dot {
+        cursor: pointer;
+        height: 13px;
+        width: 13px;
+        margin: 0 2px;
+        background-color: #bbb;
+        border-radius: 50%;
+        display: inline-block;
+        transition: background-color 0.6s ease;
+    }
 
-div.feedback {
-	text-align: right;
-	margin: -1em 20px 2em 20px;
-	}
+        .active, .dot:hover {
+            background-color: #717171;
+        }
 
-p {
-	margin: 20px;
-	}
+    /* Fading animation */
+    .fade {
+        -webkit-animation-name: fade;
+        -webkit-animation-duration: 1.5s;
+        animation-name: fade;
+        animation-duration: 1.5s;
+    }
 
-.post p {
-	text-align: justify;
-	}
+    @-webkit-keyframes fade {
+        from {
+            opacity: .4;
+        }
 
-#menu {
-	margin: 2em 0;
-	padding: 0;
-	float: right;
-	width: 25%;
-	line-height: 130%;
-	}
+        to {
+            opacity: 1;
+        }
+    }
 
-#menu ul{
-	margin: .2em 0 .2em 1.6em;
-	padding: .5em 0;
-	list-style: none;
-	}
+    @keyframes fade {
+        from {
+            opacity: .4;
+        }
 
-#menu ul li {
-	margin: 1em 0;
-	padding: 0;
-	font-size: 1em;
-	font-weight: bold;
-	text-transform: uppercase;
-	letter-spacing: .2em;
-	}
+        to {
+            opacity: 1;
+        }
+    }
 
-#menu ul ul {
-	list-style: square;
-	}
+    #about {
+        text-align: center;
+        color: #888;
+        font-size: 0.8em;
+    }
 
-#menu ul ul li {
-	margin: 0;
-	padding: 0;
-	font-size: 1em;
-	font-weight: normal;
-	text-transform: none;
-	letter-spacing: normal;
-	}
 
-#menu li a {
-	margin: 0;
-	padding: 0;
-	}
+    #header a {
+        display: block;
+        text-decoration: none;
+        color: #bbe;
+        margin: 0;
+        padding: 0;
+    }
 
-body>div#rap>h1#header, body>div#rap>div#content, body>div#rap>div#menu {
-	background: url(446-70.png) repeat;
-	border: 1px solid #335;
-	}
+    h1 {
+        text-align: left;
+        font-size: 4em;
+        font-weight: bold;
+        font-style: italic;
+        margin: 0;
+        padding: .4em;
+    }
 
-* html h1#header, * html div#content, * html div#menu {
-	/* star html hack for IE, because it doesn't handle PNG transparency right */
-	background: #446;
-	background-image: none;
-	border: 1px solid #335;
-	}
+    #content {
+        margin: 2em 0;
+        padding: 0;
+        float: left;
+        width: 70%;
+        background: #446;
+        border: 1px solid #335;
+        line-height: 140%;
+    }
 
-p.credit {
-	clear: both;
-	text-align: center;
-	color: #bbd;
-	}
+    h2 {
+        font-weight: bold;
+        font-size: 1em;
+        text-align: right;
+        margin: 1em 20px 0 20px;
+        padding: 0 0 .1em 0;
+        color: #eef;
+        border-bottom: 1px solid #99b;
+    }
 
-a {
-	text-decoration: none;
-	}
+    h3 {
+        font-weight: normal;
+        font-size: 1.8em;
+        text-align: left;
+        color: #99b;
+        margin: .3em 20px;
+        padding: 0;
+    }
 
-a:hover, a:focus {
-	text-decoration: underline;
-	}
+    div.meta {
+        text-align: right;
+        font-size: .9em;
+        margin: .7em 20px;
+    }
 
-abbr[title], acronym[title] {
-	cursor: help;
-	color: #eef;
-	border-bottom: 1px dotted #eef;
-	}
+    div.feedback {
+        text-align: right;
+        margin: -1em 20px 2em 20px;
+    }
 
-img {
-	border: none;
-	}
+    p {
+        margin: 20px;
+    }
 
-input[type="submit"] {
-	margin: 0;
-	width: 90px;
-	padding: 1px;
-	background: transparent;
-	font-family: 'Bitstream Vera Sans', verdana, sans-serif;
-	font-size: .9em;
-	border: 2px outset #99b;
-	}
+    .post p {
+        text-align: justify;
+    }
 
-input[type="submit"]:hover, input[type="submit"]:focus {
-	cursor: pointer;
-	background: #668;
-	}
+    #menu {
+        margin: 2em 0;
+        padding: 0;
+        float: right;
+        width: 25%;
+        line-height: 130%;
+    }
 
-#menu input {
-	width: 87%;
-	margin: .6em 0;
-	}
+        #menu ul {
+            margin: .2em 0 .2em 1.6em;
+            padding: .5em 0;
+            list-style: none;
+        }
 
-#menu input[type="submit"] {
-	width: 40%;
-	margin: 0 0 0 50%;
-	}
-	
-table 
-{
-	background: #FFFFFF;
-	vertical-align: top;
-	text-align: center;
-	border: 1px solid black;
-}
-	
-td {
-	text-align: center;
-	font-weight: normal;
-	text-transform: none;
-	letter-spacing: normal;
-	border: 1px solid grey;
-	}
+            #menu ul li {
+                margin: 1em 0;
+                padding: 0;
+                font-size: 1em;
+                font-weight: bold;
+                text-transform: uppercase;
+                letter-spacing: .2em;
+            }
 
-thead {
-	font-weight: bold;
-	}
-	
-ul {
-	list-style: square;
-	}
+            #menu ul ul {
+                list-style: square;
+            }
 
-blockquote, pre, var {
-	font-style: normal;
-	font-family: 'Andale Mono', monospace;
-	}
+                #menu ul ul li {
+                    margin: 0;
+                    padding: 0;
+                    font-size: 1em;
+                    font-weight: normal;
+                    text-transform: none;
+                    letter-spacing: normal;
+                }
 
-select 
-{
-	width: 380px ;
-}
+        #menu li a {
+            margin: 0;
+            padding: 0;
+        }
 
-input {
-	width: 240px;
-	padding: .3em;
-	border: 1px solid #99b;
-	background: transparent;
-	font-family: 'Bitstream Vera Sans', verdana, sans-serif;
-	font-size: .9em;
-	}
+    body > div#rap > h1#header, body > div#rap > div#content, body > div#rap > div#menu {
+        background: url(446-70.png) repeat;
+        border: 1px solid #335;
+    }
 
-textarea {
-	width: 95%;
-	height: 15em;
-	padding: .3em;
-	border: 1px solid #99b;
-	background: transparent;
-	font-family: 'Bitstream Vera Sans', verdana, sans-serif;
-	font-size: .9em;
-	}
+    * html h1#header, * html div#content, * html div#menu {
+        /* star html hack for IE, because it doesn't handle PNG transparency right */
+        background: #446;
+        background-image: none;
+        border: 1px solid #335;
+    }
 
-.meta ul, .meta ul li {
-	display: inline;
-	list-style: none;
-	margin: 0;
-	padding: 0;
-	}
-	
-.subfolders, .buckets 
-{
-	border-style: dotted;
-	vertical-align: bottom;
-}
+    p.credit {
+        clear: both;
+        text-align: center;
+        color: #bbd;
+    }
 
-div.float {
-  float: left;
-  }
-  
-div.float p {
-   text-align: center;
-   }
+    a {
+        text-decoration: none;
+    }
 
-div.spacer {
-  clear: both;
-  }
+        a:hover, a:focus {
+            text-decoration: underline;
+        }
+
+    abbr[title], acronym[title] {
+        cursor: help;
+        color: #eef;
+        border-bottom: 1px dotted #eef;
+    }
+
+    img {
+        border: none;
+    }
+
+    input[type="submit"] {
+        margin: 0;
+        width: 90px;
+        padding: 1px;
+        background: transparent;
+        font-family: 'Bitstream Vera Sans', verdana, sans-serif;
+        font-size: .9em;
+        border: 2px outset #99b;
+    }
+
+        input[type="submit"]:hover, input[type="submit"]:focus {
+            cursor: pointer;
+            background: #668;
+        }
+
+    #menu input {
+        width: 87%;
+        margin: .6em 0;
+    }
+
+        #menu input[type="submit"] {
+            width: 40%;
+            margin: 0 0 0 50%;
+        }
+
+    table {
+        background: #FFFFFF;
+        vertical-align: top;
+        text-align: center;
+        border: 1px solid black;
+    }
+
+    td {
+        text-align: center;
+        font-weight: normal;
+        text-transform: none;
+        letter-spacing: normal;
+        border: 1px solid grey;
+    }
+
+    thead {
+        font-weight: bold;
+    }
+
+    ul {
+        list-style: square;
+    }
+
+    blockquote, pre, var {
+        font-style: normal;
+        font-family: 'Andale Mono', monospace;
+    }
+
+    select {
+        width: 380px;
+    }
+
+    input {
+        width: 240px;
+        padding: .3em;
+        border: 1px solid #99b;
+        background: transparent;
+        font-family: 'Bitstream Vera Sans', verdana, sans-serif;
+        font-size: .9em;
+    }
+
+    textarea {
+        width: 95%;
+        height: 15em;
+        padding: .3em;
+        border: 1px solid #99b;
+        background: transparent;
+        font-family: 'Bitstream Vera Sans', verdana, sans-serif;
+        font-size: .9em;
+    }
+
+    .meta ul, .meta ul li {
+        display: inline;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    .subfolders, .buckets {
+        border-style: dotted;
+        vertical-align: bottom;
+    }
+
+    div.float {
+        float: left;
+    }
+
+        div.float p {
+            text-align: center;
+        }
+
+    div.spacer {
+        clear: both;
+    }
