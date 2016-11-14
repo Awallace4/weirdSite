@@ -1,7 +1,8 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="Default.aspx.cs" Debug="true" Inherits="_Default" %>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-
+<script src="https://apis.google.com/js/platform.js" async defer></script>
+<meta name="google-signin-client_id" content="779508435556-4277cmau6emfp4f88ja5jbnp4e2pof9p.apps.googleusercontent.com" />
 <html xmlns="http://www.w3.org/1999/xhtml" >
 <head runat="server">
 
@@ -15,6 +16,15 @@
         var i = Number(o.value);
         i++;
         o.value = i;
+        }
+    </script>
+    <script type="text/javascript" language="javascript">
+        function onSignIn(googleUser) {
+            var profile = googleUser.getBasicProfile();
+            console.log('ID: ' + profile.getId());
+            console.log('Name: ' + profile.getName());
+            console.log('Image URL: ' + profile.getImageUrl());
+            console.log('Email: ' + profile.getEmail());
         }
     </script>
     <style type="text/css" media="screen">
@@ -31,8 +41,9 @@
         <li class="music"><a href="MusicPage.aspx">music</a></li>
         <li class="podcast"><a href="PodcastPage">podcast</a></li>
         <li class="video"><a href="VideoPage">video</a></li>
-        <li class="about"><a href="#about">about</a></li>          
-        <li class="login"><a href="WebLogin.aspx">login</a></li>
+        <li class="about"><a href="#about">about</a></li>         
+        <div class="g-signin2" data-onsuccess="onSignIn" data-prompt="select_account"></div>
+        <!--<li class="login"><a href="WebLogin.aspx">login</a></li>-->
       </ul>
     </div>
   </header>
